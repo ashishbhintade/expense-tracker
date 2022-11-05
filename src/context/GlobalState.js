@@ -1,4 +1,5 @@
 import React, { createContext, useReducer } from "react";
+import AppReducer from "./AppReducer";
 
 //Initial State
 const initialState = {
@@ -22,6 +23,8 @@ export const GlobalProvider = ({ children }) => {
       value={{
         trasnactions: state.trasnactions,
       }}
-    ></GlobalContext.Provider>
+    >
+      {children}
+    </GlobalContext.Provider>
   );
 };
